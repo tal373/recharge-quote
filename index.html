@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>הצעת מחיר RECHARGE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Syne:wght@600;700&display=swap">
+<style>
+/* Layout: one calm RTL column — header, activity lines (time · what's included · price), production lines, totals block, not-included list, terms */
+:root{
+  --bg:#FFFFFF; --ink:#141413; --muted:#77736E; --line:#E8E5DF; --soft:#F6F5F1;
+  --bayz:#5B6B4E; --bayz-soft:#EDF0E8;
+  --body:"Assistant","Arial Hebrew",Arial,sans-serif; --brand:"Syne","Arial Black",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121211; --ink:#F2F0EB; --muted:#9E9A94; --line:#2B2A27; --soft:#1B1B19;
+  --bayz:#AEBE98; --bayz-soft:#232A1D; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121211; --ink:#F2F0EB; --muted:#9E9A94; --line:#2B2A27; --soft:#1B1B19;
+  --bayz:#AEBE98; --bayz-soft:#232A1D; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;direction:rtl;margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:760px;margin:0 auto;padding-block:44px 88px;display:flex;flex-direction:column;gap:48px}
+header{display:flex;flex-direction:column;gap:22px}
+.logo{direction:ltr;align-self:flex-start;display:flex;flex-direction:column;line-height:.9}
+.logo b{font-family:var(--brand);font-weight:700;font-size:26px;letter-spacing:.04em}
+.logo b i{font-style:normal;color:var(--bayz)}
+.logo span{font-family:var(--brand);font-weight:600;font-size:9px;letter-spacing:.24em;color:var(--muted);margin-top:6px}
+.meta{font-size:14px;color:var(--muted);font-weight:600;letter-spacing:.03em}
+h1{font-weight:800;font-size:clamp(32px,6.5vw,46px);line-height:1.08;margin:4px 0 0}
+.lead{color:var(--muted);margin:0;max-width:60ch}
+.to{display:flex;flex-wrap:wrap;gap:6px 28px;font-size:14.5px}
+.to span{color:var(--muted)}
+section{display:flex;flex-direction:column;gap:6px}
+h2{font-size:22px;font-weight:800;margin:0 0 8px;border-bottom:1.5px solid var(--ink);padding-bottom:10px}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.item .name{font-weight:800;font-size:18px}
+.item .when{font-size:14px;color:var(--bayz);font-weight:700;font-variant-numeric:tabular-nums}
+.item .inc{grid-column:1/2;color:var(--muted);font-size:15px}.item .inc b{color:var(--ink);font-weight:700}
+.item .price{grid-row:1/3;grid-column:2;font-weight:800;font-size:18px;font-variant-numeric:tabular-nums;white-space:nowrap;align-self:start}
+.item .head{display:flex;flex-direction:column;gap:2px}
+.sum{background:var(--soft);border-radius:12px;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.sum .r{display:flex;justify-content:space-between;gap:16px;font-variant-numeric:tabular-nums}
+.sum .r span:first-child{color:var(--muted)}
+.sum .r.total{border-top:1.5px solid var(--ink);padding-top:12px;margin-top:4px;font-weight:800;font-size:22px}
+.sum .r.total span:first-child{color:var(--ink)}
+.sum .pp{font-size:14px;color:var(--muted)}
+ul.plain{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+ul.plain li{padding:12px 14px;border:1px solid var(--line);border-radius:10px}
+ul.plain li b{display:block}
+ul.plain li small{color:var(--muted);font-size:14.5px}
+ul.terms{margin:0;padding-inline-start:20px;display:flex;flex-direction:column;gap:6px;color:var(--ink)}
+.sign{display:flex;flex-direction:column;gap:2px;font-size:15px}
+.sign span{color:var(--muted)}
+footer{direction:ltr;text-align:center;font-family:var(--brand);font-size:11px;letter-spacing:.3em;color:var(--muted)}
+@media (max-width:480px){.item{grid-template-columns:1fr}.item .price{grid-row:auto;grid-column:1}}
+@media print{body{padding:0}.wrap{padding-block:24px}.item,ul.plain li,.sum{break-inside:avoid}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo"><b>BAYZ<i>.</i></b><span>EXPERIENCE ISRAEL</span></div>
+    <div>
+      <div class="meta">RECHARGE · MOA · 28–30 בינואר · עד 60 משתתפים</div>
+      <h1>הצעת מחיר לוולנס</h1>
+      <div class="meta" style="margin-top:8px;color:var(--bayz)">הצעה ראשונית · ייתכנו התאמות קלות אחרי התיאום הלוגיסטי מול המתחם</div>
+    </div>
+    <p class="lead">כל חלק הוולנס של הריטריט, לפי הלו״ז שבנינו יחד. כל פעילות בנויה ל-60 משתתפים, עם מנחים מהשורה הראשונה בארץ וצוות עוזרים, כך שכל משתתף מקבל יחס אישי גם בקבוצה גדולה.</p>
+    <div class="to">
+      <div><span>לכבוד: </span>אירית, עבור רותם חג׳ג׳ ואלעד רגב</div>
+      <div><span>תאריך: </span>8.11.2026</div>
+    </div>
+  </header>
+
+  <section>
+    <h2>הפעילויות</h2>
+    <div class="item">
+      <div class="head"><span class="name">אקסטטיק דאנס</span><span class="when">חמישי 28.1 · <span dir="ltr">21:30–23:00</span></span></div>
+      <div class="inc">מנחה עם כמעט עשור של אקסטטיק דאנס בארץ ובעולם. פתיחה מודרכת שמחברת את הקבוצה, ומשם מסע מוזיקלי עם ירידה רכה בסוף.</div>
+      <div class="price">3,200 ₪</div>
+    </div>
+    <div class="item">
+      <div class="head"><span class="name">מוביליטי ותנועה</span><span class="when">שישי 29.1 · <span dir="ltr">08:00–09:15</span></span></div>
+      <div class="inc">מאמני תנועה מצוות BAYZ. התעוררות של הגוף, פתיחת מפרקים ותנועה חופשית שמכינה לנשימות ולקרח.</div>
+      <div class="price">2,500 ₪</div>
+    </div>
+    <div class="item">
+      <div class="head"><span class="name">מסע נשימות ואמבטיות קרח</span><span class="when">שישי 29.1 · <span dir="ltr">09:45–13:00</span></span></div>
+      <div class="inc">צוות מדריכים מוסמכים לנשימות וקרח. מסע נשימה מודרך בשיטת וים הוף, ואחריו כניסה לקרח לעד 40 משתתפים. כולל 4 אמבטיות, קרח וציוד, 2–3 מדריכים מוסמכים, הקמה ופירוק.</div>
+      <div class="price">6,500 ₪</div>
+    </div>
+    <div class="item">
+      <div class="head"><span class="name">טקס קקאו</span><span class="when">שישי 29.1 · <span dir="ltr">17:00–18:00</span></span></div>
+      <div class="inc">מנחה מובילה בטקסי קקאו. טקס של שעה במעגל סביב מזבח, בזמן השקיעה. כולל קקאו טקסי ל-60 משתתפים.</div>
+      <div class="price">4,200 ₪</div>
+    </div>
+    <div class="item">
+      <div class="head"><span class="name">סאונד הילינג</span><span class="when">שישי 29.1 · <span dir="ltr">21:00–22:30</span></span></div>
+      <div class="inc">מטפל בצליל עם יותר מעשור של סדנאות. מסע צליל של 90 דקות בשכיבה. מטפל מוביל ושני עוזרים שעוברים בין המשתתפים לניגון אישי. כולל ציוד והגברה.</div>
+      <div class="price">6,700 ₪</div>
+    </div>
+    <div class="item">
+      <div class="head"><span class="name">יוגה רכה</span><span class="when">שבת 30.1 · <span dir="ltr">08:00–09:00</span></span></div>
+      <div class="inc">שיעור עדין ומשקם אחרי יום שישי מלא, עם מורה שמתמחה בקבוצות גדולות.</div>
+      <div class="price">3,800 ₪</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>הפקה</h2>
+    <div class="item">
+      <div class="head"><span class="name">הפקה וניהול הוולנס</span><span class="when">כל שלושת הימים</span></div>
+      <div class="inc">בניית התכנית, בחירת המנחים ותיאום מולם, תיאום לוגיסטי מול המתחם, וניהול בשטח לאורך כל הריטריט.</div>
+      <div class="price">5,000 ₪</div>
+    </div>
+    <div class="item">
+      <div class="head"><span class="name">עוזר הפקה</span><span class="when">3 ימים × 1,000 ₪</span></div>
+      <div class="inc">הקמה ופירוק של כל פעילות, ליווי המנחים, ושמירה על הזמנים.</div>
+      <div class="price">3,000 ₪</div>
+    </div>
+  </section>
+
+  <div class="sum">
+    <div class="r"><span>פעילויות</span><span>26,900 ₪</span></div>
+    <div class="r"><span>הפקה</span><span>8,000 ₪</span></div>
+    <div class="r total"><span>סך הכל</span><span>34,900 ₪ + מע״מ</span></div>
+    <div class="pp">כולל מע״מ: 41,182 ₪</div>
+    <div class="r" style="border-top:1px solid var(--line);padding-top:10px;margin-top:4px"><span>למשתתף, לפי 60 משתתפים</span><span>582 ₪ + מע״מ</span></div>
+  </div>
+
+  <section>
+    <h2>לא כלול בהצעה</h2>
+    <ul class="plain">
+      <li><b>הליכה לשקיעה</b><small>אנחנו סוגרים מדריכת שטח מהאזור. המחיר יישלח בנפרד.</small></li>
+      <li><b>לינה וארוחות לצוות</b><small>למנחים ולצוות ההפקה, בתיאום מול המתחם.</small></li>
+      <li><b>חללים, הגברה ותאורה</b><small>מהמתחם, כולל חלל מקורה ל-60 משתתפים בשכיבה.</small></li>
+      <li><b>מזרנים, שמיכות וכריות</b><small>ל-60 משתתפים, לפעילויות הבוקר ולסאונד הילינג.</small></li>
+      <li><b>כלי הגשה לקקאו</b><small>ספלים או כוסות ל-60 משתתפים, מהמתחם.</small></li>
+      <li><b>תשתית לקרח</b><small>נקודת מים וניקוז ליד מתחם הקרח.</small></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>תנאים</h2>
+    <ul class="terms">
+      <li>שריון המנחים מתבצע עם אישור ההצעה ותשלום מקדמה של 50%.</li>
+      <li>יתרת התשלום עד 7 ימים לפני האירוע.</li>
+      <li>פרטי המנחים יימסרו עם אישור ההצעה.</li>
+      <li>ההצעה בתוקף ל-14 יום, וזמינות המנחים מובטחת רק מרגע האישור.</li>
+      <li>כל משתתף בקרח ממלא הצהרת בריאות לפני הכניסה.</li>
+    </ul>
+  </section>
+
+  <div class="sign">
+    <b>טל ליפשטט</b>
+    <span>BAYZ Experience Israel · tal@bayzspa.com</span>
+  </div>
+
+  <footer>BAYZ EXPERIENCE ISRAEL</footer>
+</div>
+
+</body>
+</html>
