@@ -57,7 +57,20 @@ ul.terms{margin:0;padding-inline-start:20px;display:flex;flex-direction:column;g
 .sign span{color:var(--muted)}
 footer{direction:ltr;text-align:center;font-family:var(--brand);font-size:11px;letter-spacing:.3em;color:var(--muted)}
 @media (max-width:480px){.item{grid-template-columns:1fr}.item .price{grid-row:auto;grid-column:1}}
-@media print{body{padding:0}.wrap{padding-block:24px}.item,ul.plain li,.sum{break-inside:avoid}}
+.days{display:grid;grid-template-columns:1fr;gap:10px}
+.day{border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.day h3{margin:0 0 4px;font-size:16px;font-weight:800}
+.day .r{display:grid;grid-template-columns:auto 1fr;gap:10px;font-size:14.5px;align-items:baseline}
+.day .r .t{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13.5px;direction:ltr;text-align:right;min-width:78px}
+.day .r.meal{color:var(--muted)}
+.day .r b{font-weight:700}
+.rooms{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:6px}
+.rooms th,.rooms td{text-align:right;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.rooms th{font-size:13px;color:var(--muted);font-weight:700}
+.rooms td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{color:var(--muted);font-size:14px;margin:6px 0 0}
+@media (max-width:640px){.days{grid-template-columns:1fr}}
+@media print{body{padding:0}.wrap{padding-block:12px;gap:26px}.item,ul.plain li,.sum,ul.terms,.sign,.day{break-inside:avoid}h2{break-after:avoid}}
 </style>
 
 </head>
@@ -68,12 +81,11 @@ footer{direction:ltr;text-align:center;font-family:var(--brand);font-size:11px;l
     <div>
       <div class="meta">RECHARGE · MOA · 28–30 בינואר · עד 60 משתתפים</div>
       <h1>הצעת מחיר לוולנס</h1>
-      <div class="meta" style="margin-top:8px;color:var(--bayz)">הצעה ראשונית · ייתכנו התאמות קלות אחרי התיאום הלוגיסטי מול המתחם</div>
     </div>
     <p class="lead">כל חלק הוולנס של הריטריט, לפי הלו״ז שבנינו יחד. כל פעילות בנויה ל-60 משתתפים, עם מנחים מהשורה הראשונה בארץ וצוות עוזרים, כך שכל משתתף מקבל יחס אישי גם בקבוצה גדולה.</p>
     <div class="to">
       <div><span>לכבוד: </span>אירית, עבור רותם חג׳ג׳ ואלעד רגב</div>
-      <div><span>תאריך: </span>8.11.2026</div>
+      <div><span>תאריך: </span>11.11.2026</div>
     </div>
   </header>
 
@@ -86,29 +98,59 @@ footer{direction:ltr;text-align:center;font-family:var(--brand);font-size:11px;l
     </div>
     <div class="item">
       <div class="head"><span class="name">מוביליטי ותנועה</span><span class="when">שישי 29.1 · <span dir="ltr">08:00–09:15</span></span></div>
-      <div class="inc">מאמני תנועה מצוות BAYZ. התעוררות של הגוף, פתיחת מפרקים ותנועה חופשית שמכינה לנשימות ולקרח.</div>
+      <div class="inc">שני מאמני מובמנט מהמובילים בתחום. התעוררות של הגוף, פתיחת מפרקים ותנועה חופשית שמכינה לנשימות ולקרח.</div>
       <div class="price">2,500 ₪</div>
     </div>
     <div class="item">
-      <div class="head"><span class="name">מסע נשימות ואמבטיות קרח</span><span class="when">שישי 29.1 · <span dir="ltr">09:45–13:00</span></span></div>
-      <div class="inc">צוות מדריכים מוסמכים לנשימות וקרח. מסע נשימה מודרך בשיטת וים הוף, ואחריו כניסה לקרח לעד 40 משתתפים. כולל 4 אמבטיות, קרח וציוד, 2–3 מדריכים מוסמכים, הקמה ופירוק.</div>
+      <div class="head"><span class="name">סדנת נשימות</span><span class="when">שישי 29.1 · <span dir="ltr">09:45–11:45</span></span></div>
+      <div class="inc">מורה לנשימה מודעת, עם 3 מדריכים מוסמכים שעוברים בין המשתתפים. סדנה של שעתיים בשכיבה לכל 60 המשתתפים, שמסתיימת בנשימה מרגיעה לפני הקרח.</div>
+      <div class="price">7,250 ₪</div>
+    </div>
+    <div class="item">
+      <div class="head"><span class="name">אמבטיות קרח</span><span class="when">שישי 29.1 · <span dir="ltr">12:00–13:30</span></span></div>
+      <div class="inc">צוות מדריכים מוסמכים לקרח בשיטת וים הוף. הדרכה, הכנה וליווי אישי בכניסה לקרח, לעד 40 משתתפים. כולל 4 אמבטיות, קרח וציוד, 2–3 מדריכים, הקמה ופירוק.</div>
       <div class="price">6,500 ₪</div>
     </div>
     <div class="item">
       <div class="head"><span class="name">טקס קקאו</span><span class="when">שישי 29.1 · <span dir="ltr">17:00–18:00</span></span></div>
-      <div class="inc">מנחה מובילה בטקסי קקאו. טקס של שעה במעגל סביב מזבח, בזמן השקיעה. כולל קקאו טקסי ל-60 משתתפים.</div>
-      <div class="price">4,200 ₪</div>
+      <div class="inc">מנחה מובילה בטקסי קקאו. טקס של שעה במעגל סביב מזבח, בזמן השקיעה. כולל קקאו טקסי וכוסות ל-60 משתתפים.</div>
+      <div class="price">5,000 ₪</div>
     </div>
     <div class="item">
       <div class="head"><span class="name">סאונד הילינג</span><span class="when">שישי 29.1 · <span dir="ltr">21:00–22:30</span></span></div>
-      <div class="inc">מטפל בצליל עם יותר מעשור של סדנאות. מסע צליל של 90 דקות בשכיבה. מטפל מוביל ושני עוזרים שעוברים בין המשתתפים לניגון אישי. כולל ציוד והגברה.</div>
-      <div class="price">6,700 ₪</div>
+      <div class="inc">מטפל בצליל עם יותר מעשור של סדנאות. מסע צליל של 90 דקות בשכיבה. מטפל מוביל ושני עוזרים שעוברים בין המשתתפים לניגון אישי. כולל את כל כלי הנגינה והציוד.</div>
+      <div class="price">4,700 ₪</div>
     </div>
     <div class="item">
       <div class="head"><span class="name">יוגה רכה</span><span class="when">שבת 30.1 · <span dir="ltr">08:00–09:00</span></span></div>
       <div class="inc">שיעור עדין ומשקם אחרי יום שישי מלא, עם מורה שמתמחה בקבוצות גדולות.</div>
       <div class="price">3,800 ₪</div>
     </div>
+  </section>
+
+  <section>
+    <h2>הלו״ז</h2>
+    <div class="days">
+      <div class="day"><h3>חמישי 28.1</h3>
+        <div class="r meal"><span class="t">20:00–21:15</span><span>ארוחת ערב</span></div>
+        <div class="r"><span class="t">21:30–23:00</span><b>אקסטטיק דאנס</b></div>
+      </div>
+      <div class="day"><h3>שישי 29.1</h3>
+        <div class="r"><span class="t">08:00–09:15</span><b>מוביליטי ותנועה</b></div>
+        <div class="r meal"><span class="t">09:15–09:45</span><span>ארוחת בוקר קלה</span></div>
+        <div class="r"><span class="t">09:45–11:45</span><b>סדנת נשימות</b></div>
+        <div class="r"><span class="t">12:00–13:30</span><b>אמבטיות קרח</b></div>
+        <div class="r meal"><span class="t">13:30</span><span>ארוחת צהריים</span></div>
+        <div class="r"><span class="t">17:00–18:00</span><b>טקס קקאו בשקיעה</b></div>
+        <div class="r meal"><span class="t">19:00</span><span>קידוש וארוחת ערב</span></div>
+        <div class="r"><span class="t">21:00–22:30</span><b>סאונד הילינג</b></div>
+      </div>
+      <div class="day"><h3>שבת 30.1</h3>
+        <div class="r"><span class="t">08:00–09:00</span><b>יוגה רכה</b></div>
+        <div class="r meal"><span class="t">09:00</span><span>ארוחת בוקר</span></div>
+      </div>
+    </div>
+    <p class="note">ארוחת הצהריים בשישי זזה ל-13:30, כדי לתת לסדנת הנשימות שעתיים מלאות.</p>
   </section>
 
   <section>
@@ -123,24 +165,34 @@ footer{direction:ltr;text-align:center;font-family:var(--brand);font-size:11px;l
       <div class="inc">הקמה ופירוק של כל פעילות, ליווי המנחים, ושמירה על הזמנים.</div>
       <div class="price">3,000 ₪</div>
     </div>
+    <div class="item">
+      <div class="head"><span class="name">נסיעות ואש״ל</span><span class="when">צוות ההפקה</span></div>
+      <div class="inc">נסיעה לערבה וחזרה, ואש״ל לצוות ההפקה לאורך שלושת ימי האירוע.</div>
+      <div class="price">1,500 ₪</div>
+    </div>
   </section>
 
   <div class="sum">
-    <div class="r"><span>פעילויות</span><span>26,900 ₪</span></div>
-    <div class="r"><span>הפקה</span><span>10,500 ₪</span></div>
-    <div class="r total"><span>סך הכל</span><span>37,400 ₪ + מע״מ</span></div>
-    <div class="pp">כולל מע״מ: 44,132 ₪</div>
-    <div class="r" style="border-top:1px solid var(--line);padding-top:10px;margin-top:4px"><span>למשתתף, לפי 60 משתתפים</span><span>623 ₪ + מע״מ</span></div>
+    <div class="r"><span>פעילויות</span><span>32,950 ₪</span></div>
+    <div class="r"><span>הפקה</span><span>12,000 ₪</span></div>
+    <div class="r total"><span>סך הכל</span><span>44,950 ₪ + מע״מ</span></div>
+    <div class="pp">כולל מע״מ: 53,041 ₪</div>
+    <div class="r" style="border-top:1px solid var(--line);padding-top:10px;margin-top:4px"><span>למשתתף, לפי 60 משתתפים</span><span>749 ₪ + מע״מ</span></div>
   </div>
 
   <section>
     <h2>לא כלול בהצעה</h2>
     <ul class="plain">
       <li><b>הליכה לשקיעה</b><small>אנחנו סוגרים מדריכת שטח מהאזור. המחיר יישלח בנפרד.</small></li>
-      <li><b>לינה וארוחות לצוות</b><small>למנחים ולצוות ההפקה, בתיאום מול המתחם.</small></li>
-      <li><b>חללים, הגברה ותאורה</b><small>מהמתחם, כולל חלל מקורה ל-60 משתתפים בשכיבה.</small></li>
-      <li><b>מזרנים, שמיכות וכריות</b><small>ל-60 משתתפים, לפעילויות הבוקר ולסאונד הילינג.</small></li>
-      <li><b>כלי הגשה לקקאו</b><small>ספלים או כוסות ל-60 משתתפים, מהמתחם.</small></li>
+      <li><b>לינה וארוחות לצוות</b><small>לילה אחד לכל מנחה, לפי שעת הפעילות שלו, וארוחות בימים שהצוות במקום. במתחם או באזור. אפשר לסדר דרך ההפקה, או שנארגן אנחנו בתוספת עלות.</small>
+        <table class="rooms">
+          <tr><th>לילה</th><th>מי</th><th>אנשים</th><th>חדרים</th></tr>
+          <tr><td>חמישי 28.1</td><td>צוות ההפקה, אקסטטיק, מוביליטי, צוות הנשימות, צוות הקרח</td><td class="n">11</td><td class="n">7</td></tr>
+          <tr><td>שישי 29.1</td><td>צוות ההפקה, צוות הסאונד, יוגה, קקאו</td><td class="n">7</td><td class="n">5</td></tr>
+        </table></li>
+      <li><b>חללים ותאורה</b><small>מהמתחם, כולל חלל מקורה ל-60 משתתפים בשכיבה.</small></li>
+      <li><b>הגברה</b><small>השכרת מערכת ההגברה של המתחם לכל האירוע, ישירות מול המתחם.</small></li>
+      <li><b>מזרנים, בלוקים, שמיכות וכריות</b><small>ל-60 משתתפים, לפעילויות הבוקר ולסאונד הילינג.</small></li>
       <li><b>תשתית לקרח</b><small>נקודת מים וניקוז ליד מתחם הקרח.</small></li>
     </ul>
   </section>
@@ -152,7 +204,7 @@ footer{direction:ltr;text-align:center;font-family:var(--brand);font-size:11px;l
       <li>יתרת התשלום עד 7 ימים לפני האירוע.</li>
       <li>פרטי המנחים יימסרו עם אישור ההצעה.</li>
       <li>ההצעה בתוקף ל-14 יום, וזמינות המנחים מובטחת רק מרגע האישור.</li>
-      <li>כל משתתף בקרח ממלא הצהרת בריאות לפני הכניסה.</li>
+      <li>כל משתתף בפעילויות ממלא הצהרת בריאות מראש.</li>
     </ul>
   </section>
 
